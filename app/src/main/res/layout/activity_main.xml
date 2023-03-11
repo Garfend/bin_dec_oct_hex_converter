@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginHorizontal="16dp"
+    tools:context=".MainActivity">
+
+
+    <LinearLayout
+        android:id="@+id/linearLayout3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp"
+        android:gravity="left"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/convertedText"
+        app:layout_constraintTop_toTopOf="parent"
+        >
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.AppCompatRadioButton
+                android:id="@+id/binaryButtonResult"
+                android:layout_width="130dp"
+                android:layout_height="60dp"
+                android:text="@string/from_binary"
+                android:textSize="16sp" />
+
+            <androidx.appcompat.widget.AppCompatRadioButton
+            android:id="@+id/octaButtonResult"
+            android:layout_width="130dp"
+            android:layout_height="60dp"
+            android:text="@string/from_octal"
+            android:textSize="16sp" />
+
+        <androidx.appcompat.widget.AppCompatRadioButton
+            android:id="@+id/decButtonResult"
+            android:layout_width="130dp"
+            android:layout_height="60dp"
+            android:text="@string/from_decimal"
+            android:textSize="16sp" />
+
+        <androidx.appcompat.widget.AppCompatRadioButton
+            android:id="@+id/hexButtonResult"
+            android:layout_width="130dp"
+            android:layout_height="60dp"
+            android:text="@string/from_hexa"
+            android:textSize="16sp" />
+    </RadioGroup>
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/convertedText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:hint="@string/binarynumber_to_be_converted"
+        android:minHeight="48dp"
+        android:textColorHint="#757575"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout3"
+        tools:ignore="Autofill,TextFields" />
+
+
+    <EditText
+        android:id="@+id/conversionText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/conversion"
+        android:enabled="false"
+        android:minHeight="48dp"
+        android:textColorHint="#757575"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/convertedText"
+        tools:ignore="Autofill,TextFields" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="200dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/conversionText">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/binaryButton"
+            android:layout_width="80dp"
+            android:layout_height="55dp"
+            android:text="Binary"
+            android:background="@drawable/button_shape" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/octaButton"
+            android:layout_width="80dp"
+            android:layout_margin="8dp"
+            android:layout_height="55dp"
+            android:text="Octal"
+            android:background="@drawable/button_shape" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/decButton"
+            android:layout_margin="8dp"
+            android:layout_width="80dp"
+            android:layout_height="55dp"
+            android:text="Decimal"
+            android:background="@drawable/button_shape" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/hexButton"
+            android:layout_width="80dp"
+            android:layout_height="55dp"
+            android:text="Hexa"
+            android:background="@drawable/button_shape" />
+
+    </LinearLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/resetButton"
+        android:layout_width="128dp"
+        android:layout_height="64dp"
+        android:layout_marginBottom="24dp"
+        android:drawableStart="@drawable/ic_baseline_cancel_24"
+        android:text="@string/reset"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
