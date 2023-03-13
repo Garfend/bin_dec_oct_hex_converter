@@ -59,6 +59,7 @@ class MainActivity : AppCompatActivity() {
             }
             else{
                 binarButton.isEnabled=true
+
             }
         }
 

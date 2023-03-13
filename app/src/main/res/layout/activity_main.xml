@@ -7,69 +7,75 @@
     android:layout_marginHorizontal="16dp"
     tools:context=".MainActivity">
 
+    <TextView
+        android:id="@+id/Programmer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/programmer_calculator"
+        android:textSize="24sp"
+        android:layout_marginTop="58dp"
+        android:textStyle="bold"
+        android:fontFamily="monospace"
+        app:layout_constraintBottom_toTopOf="@+id/RadioGroup"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <RadioGroup
         android:id="@+id/RadioGroup"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="128dp"
-        android:orientation="horizontal"
+        android:layout_height="120dp"
+        android:layout_marginTop="28dp"
         app:layout_constraintBottom_toTopOf="@id/convertedText"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toBottomOf="@id/Programmer"
+        tools:layout_editor_absoluteX="٠dp">
 
-        <LinearLayout
-            android:id="@+id/linearLayout4"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            app:layout_constraintBottom_toTopOf="@+id/convertedText"
-            app:layout_constraintTop_toTopOf="parent">
 
-            <androidx.appcompat.widget.AppCompatRadioButton
-                android:id="@+id/binaryButtonResult"
-                android:layout_width="130dp"
-                android:layout_height="60dp"
-                android:text="@string/from_binary"
-                android:textSize="16sp" />
+        <androidx.appcompat.widget.AppCompatRadioButton
+            android:id="@+id/binaryButtonResult"
+            android:layout_width="130dp"
+            android:layout_height="60dp"
+            android:layout_gravity="left|top"
+            android:fontFamily="monospace"
+            android:text="@string/from_binary"
+            android:textSize="16sp" />
 
-            <androidx.appcompat.widget.AppCompatRadioButton
-                android:id="@+id/octaButtonResult"
-                android:layout_width="130dp"
-                android:layout_height="60dp"
-                android:text="@string/from_octal"
-                android:textSize="16sp" />
-        </LinearLayout>
+        <androidx.appcompat.widget.AppCompatRadioButton
+            android:id="@+id/octaButtonResult"
+            android:layout_width="130dp"
+            android:layout_height="60dp"
+            android:layout_gravity="left|bottom"
+            android:fontFamily="monospace"
+            android:text="@string/from_octal"
+            android:textSize="16sp" />
 
-        <LinearLayout
-            android:id="@+id/linearLayout5"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:layout_marginLeft="80dp"
-            app:layout_constraintBottom_toTopOf="@+id/convertedText"
-            app:layout_constraintTop_toTopOf="parent">
+        <androidx.appcompat.widget.AppCompatRadioButton
+            android:id="@+id/decButtonResult"
+            android:layout_width="130dp"
+            android:layout_height="60dp"
+            android:layout_gravity="right|top"
+            android:layout_marginTop="-120dp"
+            android:fontFamily="monospace"
+            android:text="@string/from_decimal"
+            android:textSize="16sp" />
 
-            <androidx.appcompat.widget.AppCompatRadioButton
-                android:id="@+id/decButtonResult"
-                android:layout_width="130dp"
-                android:layout_height="60dp"
-                android:text="@string/from_decimal"
-                android:textSize="16sp" />
+        <androidx.appcompat.widget.AppCompatRadioButton
+            android:id="@+id/hexButtonResult"
+            android:layout_width="130dp"
+            android:layout_height="60dp"
+            android:layout_gravity="right|bottom"
+            android:fontFamily="monospace"
+            android:text="@string/from_hexa"
+            android:textSize="16sp" />
 
-            <androidx.appcompat.widget.AppCompatRadioButton
-                android:id="@+id/hexButtonResult"
-                android:layout_width="130dp"
-                android:layout_height="60dp"
-                android:text="@string/from_hexa"
-                android:textSize="16sp" />
-        </LinearLayout>
+
     </RadioGroup>
-
 
     <EditText
         android:id="@+id/convertedText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:fontFamily="monospace"
         android:layout_marginTop="40dp"
         android:hint="@string/binarynumber_to_be_converted"
         android:minHeight="48dp"
@@ -84,12 +90,13 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="@string/conversion"
+        android:fontFamily="monospace"
         android:enabled="false"
         android:minHeight="48dp"
-        android:textColorHint="#000000"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black"
         app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/convertedText"
         tools:ignore="Autofill,TextFields" />
@@ -99,7 +106,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:layout_marginBottom="200dp"
+        android:layout_marginBottom="180dp"
         android:gravity="center"
         android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -107,6 +114,7 @@
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/binaryButton"
+            android:fontFamily="monospace"
             android:layout_width="80dp"
             android:layout_height="55dp"
             android:text="@string/binary"
@@ -114,6 +122,7 @@
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/octaButton"
+            android:fontFamily="monospace"
             android:layout_width="80dp"
             android:layout_margin="8dp"
             android:layout_height="55dp"
@@ -123,6 +132,7 @@
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/decButton"
             android:layout_margin="8dp"
+            android:fontFamily="monospace"
             android:layout_width="80dp"
             android:layout_height="55dp"
             android:text="@string/decimal"
@@ -131,6 +141,7 @@
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/hexButton"
             android:layout_width="80dp"
+            android:fontFamily="monospace"
             android:layout_height="55dp"
             android:text="@string/hexa"
             android:background="@drawable/button_shape" />
@@ -141,6 +152,7 @@
         android:id="@+id/resetButton"
         android:layout_width="128dp"
         android:layout_height="64dp"
+        android:fontFamily="monospace"
         android:layout_marginBottom="24dp"
         android:drawableStart="@drawable/ic_baseline_cancel_24"
         android:text="@string/reset"

@@ -1,6 +1,6 @@
 <resources>
     <string name="app_name">bin_dec_oct_hex_converter</string>
-    <string name="binarynumber_to_be_converted">BinaryNumber to be converted</string>
+    <string name="binarynumber_to_be_converted">Number to be converted</string>
     <string name="Equal">=</string>
     <string name="conversion">Conversion</string>
     <string name="binary">Binary</string>
@@ -13,4 +13,5 @@
     <string name="from_decimal">From Decimal</string>
     <string name="from_hexa">FROM HEXA</string>
     <string name="decimal">Decimal</string>
+    <string name="programmer_calculator">Programmer calculator</string>
 </resources>
