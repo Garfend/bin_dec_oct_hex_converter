@@ -7,7 +7,7 @@
     <string name="octal">OCTAL</string>
     <string name="deci">DECI</string>
     <string name="hexa">HEXA</string>
-    <string name="reset">Reset</string>
+    <string name="reset">Clear</string>
     <string name="from_binary">from Binary</string>
     <string name="from_octal">from Octal</string>
     <string name="from_decimal">From Decimal</string>
