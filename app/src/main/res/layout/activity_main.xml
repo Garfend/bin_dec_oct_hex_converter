@@ -45,7 +45,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:layout_marginStart="80dp"
+            android:layout_marginLeft="80dp"
             app:layout_constraintBottom_toTopOf="@+id/convertedText"
             app:layout_constraintTop_toTopOf="parent">
 
@@ -72,8 +72,8 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
         android:hint="@string/binarynumber_to_be_converted"
-        android:maxLength="16"
         android:minHeight="48dp"
+        android:maxLength="12"
         android:textColorHint="#757575"
         app:layout_constraintTop_toBottomOf="@+id/RadioGroup"
         tools:ignore="Autofill,TextFields" />
@@ -84,10 +84,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="@string/conversion"
-        android:textColor="@color/black"
         android:enabled="false"
         android:minHeight="48dp"
-        android:textColorHint="#757575"
+        android:textColorHint="#000000"
         app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
