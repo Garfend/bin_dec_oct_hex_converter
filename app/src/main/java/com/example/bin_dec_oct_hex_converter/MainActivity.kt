@@ -223,6 +223,7 @@ class MainActivity : AppCompatActivity() {
 
              return when (currentOperation) {
                 Operation.Bin -> firstNumber
+
                 Operation.Oct -> convertBinToOct(firstNumber).toString()
                 Operation.Dec -> convertBinToDec(firstNumber).toString()
                 Operation.Hex -> convertDecToHex(convertBinToDec(firstNumber).toString())
@@ -265,8 +266,6 @@ class MainActivity : AppCompatActivity() {
                 null -> "0"
             }
     }
-
-
 
 
     private fun convertBinToDec(bin: String): Int {

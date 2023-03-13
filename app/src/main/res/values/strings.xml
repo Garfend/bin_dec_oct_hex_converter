@@ -12,4 +12,5 @@
     <string name="from_octal">from Octal</string>
     <string name="from_decimal">From Decimal</string>
     <string name="from_hexa">FROM HEXA</string>
+    <string name="decimal">Decimal</string>
 </resources>
